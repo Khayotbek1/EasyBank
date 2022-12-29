@@ -1,0 +1,95 @@
+.footer{
+    padding: 4.8rem 0;
+    background: $footer-bg;
+    &__container{
+        display: flex;
+        align-items: center;
+
+        @include responsive(mobile){
+            flex-direction: column;
+        }
+        
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        margin-right: 131px;
+        @include responsive(tablet) {
+            margin-right: auto;
+        }
+
+        @include responsive(mobile){
+            text-align: center;
+            margin-right: 0;
+            margin-bottom: 3.2rem;
+        }
+        .site-logo{
+            margin-bottom: 55px;
+            @include responsive(mobile){
+                margin-bottom: 32px;
+            }
+        }
+
+        ul{
+            display: flex;
+            align-items: center;
+            gap: 1.3rem;
+          
+        }
+       
+    }
+    &__wrapper__link svg path{
+            fill: currentColor;
+    }
+    &__wrapper__link svg path:hover{
+        color: #30c88f;
+    }
+
+    &__sitenav{
+        margin-right: auto;
+        @include responsive(mobile){
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            margin-right: 0;
+        }
+
+        ul{
+            display: grid;
+            grid-template-columns: repeat(2, 160px);
+            column-gap: 3rem;
+            row-gap: 0.8rem;
+
+            @include responsive(tablet) {
+            grid-template-columns: repeat(2, 100px);
+
+            }
+            @include responsive(mobile){
+                grid-template-columns: repeat(1, 100px);
+                margin-bottom: 3.2rem;
+            }
+        }
+        ul a:hover{
+            color: #30c88f;
+        }
+    }
+        a{
+            @include font(1.5rem, 2.6rem, 400, $white-color);
+            transition: .2s;
+        }
+        
+        &__div{
+            text-align: right;
+            @include responsive(mobile){
+                text-align: center;
+            }
+        }
+
+        &__btn{
+            margin-bottom: 24px;
+        }
+
+        
+    
+}

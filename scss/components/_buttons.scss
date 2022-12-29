@@ -1,0 +1,13 @@
+
+.btn {
+    display: inline-block;
+    background: linear-gradient( to right,#33D35E 0%,#2AB6D9 58%, #33D35E 100%);
+    background-size: 200% auto;
+    border-radius: 22px;
+    padding: 0.8rem 3.6rem 0.8rem 3.3rem;
+    transition: .5s;
+    @include font(1.4rem, 2.8rem, 500, $white-color);
+}
+.btn:hover {
+   background-position: right center;
+}

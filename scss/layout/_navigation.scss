@@ -1,0 +1,23 @@
+.sitenav{
+    display: flex;
+    align-items: center;
+    &__list{
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+    &__link{
+        display: inline-block;
+        padding: 2.8rem 0;
+        border-bottom: 4px solid transparent;
+        transition: 0.3s;
+        @include font(1.4rem, 1.6rem);
+    }
+    &__link:hover{
+        border-bottom: 4px solid #33d35e;
+    }
+    @include responsive(tablet) {
+        display: none;
+    }
+    
+}

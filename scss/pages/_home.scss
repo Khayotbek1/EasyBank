@@ -1,0 +1,183 @@
+.hero{
+    background: url('../images/png/hero-img.png'), $hero-articles ;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 17rem 0;
+    
+    @include responsive(tablet){
+        padding: 40px 0;
+    }
+
+    @include responsive(mobile){
+        background: url('../images/png/mobile-hero-bg.png'), $hero-articles;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__text-wrapper{
+        width: 100%;
+        max-width: 447px;
+        @include responsive(mobile){
+            width: 100%;
+            max-width: 327px
+        }
+        h1{
+            @include font(5.6rem, 6.4rem, 100, $text-color2);
+            margin-bottom: 24px;
+
+            @include responsive(mobile){
+                @include font(4rem, 4.7rem 100, $text-color2);
+                margin-bottom: 1.6rem;
+            }
+        }
+        p{
+            @include font(1.8rem, 2.8rem);
+            margin-bottom: 36px;
+
+            @include responsive(mobile){
+            @include font(1.5rem, 2.6rem);
+            margin-bottom: 32px;
+            }
+        }
+    }
+
+    @include responsive(tablet) {
+        background: $hero-articles;
+        &__text-wrapper {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+    }
+    
+}
+
+
+.services{
+    background-color: $services-bg;
+    padding-top: 9.6rem;
+    padding-bottom: 9.4rem;
+
+    @include responsive(tablet){
+        text-align: center;
+        align-items: center;
+        justify-content: center
+    }
+    &__title{
+        @include font(4rem, 6.4rem, 100, $text-color2);
+        margin-bottom: 16px;
+        @include responsive(mobile){
+            @include font(3.2rem, 3.8rem, 100, $text-color2);
+            margin-bottom: 14px;
+        }
+    }
+    &__desc{
+        @include font(1.8rem, 2.8rem);
+        margin-bottom: 72px;
+        
+        @include responsive(mobile){
+        @include font(1.5rem, 2.5rem);
+            margin-bottom: 52px;
+        }
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 255px);
+        column-gap: 30px;
+        row-gap: 32px;
+
+        @include responsive(tablet){
+            margin-right: auto;
+            margin-left: auto;
+            place-content: center;
+        }
+    }
+    &__item{
+        
+        img{
+            margin-bottom: 40px;
+            @include responsive(tablet){
+                margin-right: auto;
+                margin-left: auto;
+                @include responsive(mobile){
+                    margin-bottom: 24px;
+                }
+            }
+        }
+        h3{
+            @include font(2.4rem, 2.8rem 100, $text-color2);
+            margin-bottom: 26px;
+            
+            @include responsive(mobile){
+            @include font(2rem, 2.8rem 100, $text-color2);
+            margin-bottom: 16px;
+            }
+        }
+        p{
+            @include font(1.6rem, 2.6rem);
+
+            @include responsive(mobile){
+            @include font(1.5rem, 2.5rem);
+            }
+        }
+    }
+    
+}
+
+.articles{
+    background-color: $hero-articles;
+    &__container{
+        padding: 8rem 0;
+        @include responsive(tablet)  {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__title{
+        margin-bottom: 4rem;
+        @include font(4rem, 6.4rem, 100, $text-color2);
+
+        @include responsive(mobile){
+            @include font(3.2rem, 3.8rem, 100, $text-color2);
+            margin-bottom: 3.1rem;
+        }
+    }
+   
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        @include responsive(tablet)  {
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__item{
+        
+        width: 100%;
+        max-width: 255px;
+    }
+    img{
+        margin-bottom: 2.5rem;
+    }
+    &__subtitle{
+        margin-bottom: 8px;
+        @include font(1rem, 1.8rem);
+    }
+    &__item__info{
+        padding: 0 2.4rem 1.9rem;
+    }
+    &__item__title{
+        margin-bottom: 8px;
+        @include font(1.6rem, 2rem, 100, $text-color2);
+        transition: .3s;
+        cursor: pointer;
+    }
+    &__item__title:hover{
+        color: #30c88f;
+    }
+    &__desc{
+        @include font(1.3rem, 1.8rem)
+    }
+}

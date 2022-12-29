@@ -1,0 +1,29 @@
+@mixin font($size, $lineHeight, $weight: 400, $color: #9597a5, $family: 'public sans'){
+    font: {
+        size: $size;
+        weight: $weight;
+        family: $family
+    }
+    line-height: $lineHeight;
+    color: $color;
+}
+
+@mixin responsive($device) {
+    @if $device == tablet {
+        @media (max-width: 800px){
+            @content;
+        }
+    } @else if $device == mobile {
+        @media (max-width: 400px){
+            @content;
+        }
+    }
+    
+}
+
+// @mixin responsive($device) {
+//     @media (max-width: $device){
+//         @content;
+//     }
+
+// }
